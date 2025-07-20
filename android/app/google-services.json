@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316091685282",
+    "project_id": "datasistem-fc031",
+    "storage_bucket": "datasistem-fc031.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316091685282:android:3b78475a3eb02e2a357afb",
+        "android_client_info": {
+          "package_name": "com.example.engginering"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB7Idrdk1afWvI4ocUQp9sEEFKXAhmkro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
