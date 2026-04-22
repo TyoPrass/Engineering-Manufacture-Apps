@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   
-  get :
+  get: ^4.7.2
   image_picker: ^1.1.2  
   video_player: ^2.7.2  
   path_provider: ^2.1.1 
@@ -43,6 +43,7 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # Firebase
+  firebase_core: ^3.13.0
   firebase_auth: ^5.5.3 
   cloud_firestore: ^5.6.7
   firebase_storage: ^12.4.5
@@ -57,6 +58,7 @@ dependencies:
   http: ^1.1.0
   fl_chart: ^0.65.0
   intl: ^0.20.2
+  path: ^1.9.0
   # flutter_launcher_icons: ^0.14.3
    # Downgraded from ^5.5.3 to work with lower Android SDK
   # Downgraded from ^5.5.3 to work with lower Android SDK
@@ -71,12 +73,7 @@ flutter_launcher_icons:
   ios: true
   image_path: "assets/images/logo_app.png"
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  # Lint rules are configured directly in analysis_options.yaml
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
       // Calculate completion percentage and count closed trials
       int closed = 0;
       for (var doc in snapshot.docs) {
-        Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+        Map<String, dynamic> data = doc.data();
         if (data['status'] == 'close') {
           closed++;
         }
@@ -288,7 +288,7 @@ class _HomePageState extends State<HomePage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withValues(alpha: 0.3),
             spreadRadius: 2,
             blurRadius: 5,
             offset: const Offset(0, 3),
@@ -396,7 +396,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Colors.blue.withOpacity(0.2),
+                      color: Colors.blue.withValues(alpha: 0.2),
                     ),
                   ),
                   // Tooling data line
@@ -411,7 +411,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     belowBarData: BarAreaData(
                       show: true,
-                      color: Colors.orange.withOpacity(0.2),
+                      color: Colors.orange.withValues(alpha: 0.2),
                     ),
                   ),
                 ],
@@ -560,7 +560,7 @@ class _HomePageState extends State<HomePage> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       child: ListTile(
         leading: CircleAvatar(
-          backgroundColor: color.withOpacity(0.2),
+          backgroundColor: color.withValues(alpha: 0.2),
           child: Icon(icon, color: color, size: 20),
         ),
         title: Text(title),
@@ -579,7 +579,7 @@ class _HomePageState extends State<HomePage> {
       children: [
         CircleAvatar(
           radius: 24,
-          backgroundColor: color.withOpacity(0.2),
+          backgroundColor: color.withValues(alpha: 0.2),
           child: Icon(icon, color: color),
         ),
         const SizedBox(height: 8),

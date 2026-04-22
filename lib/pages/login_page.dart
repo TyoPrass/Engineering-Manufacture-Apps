@@ -84,12 +84,12 @@ class LoginPage extends StatelessWidget {
                     onPressed: () => Get.toNamed(Routes.REGISTER),
                     style: ButtonStyle(
                       overlayColor:
-                          MaterialStateProperty.all(Colors.transparent),
+                          WidgetStateProperty.all(Colors.transparent),
                       shadowColor:
-                          MaterialStateProperty.all(Colors.transparent),
+                          WidgetStateProperty.all(Colors.transparent),
                       backgroundColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                      foregroundColor: MaterialStateProperty.all(
+                          WidgetStateProperty.all(Colors.transparent),
+                      foregroundColor: WidgetStateProperty.all(
                           Theme.of(context).primaryColor),
                     ),
                     child: const Text(
@@ -108,7 +108,7 @@ class LoginPage extends StatelessWidget {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
                     child: Container(
-                      color: Colors.black.withOpacity(0.4),
+                      color: Colors.black.withValues(alpha: 0.4),
                       child: const Center(
                         child: CircularProgressIndicator(
                           color: Colors.white,

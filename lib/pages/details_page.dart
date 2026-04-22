@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
-import 'package:engginering/services/trial_service.dart';
 import 'package:engginering/services/bookmark_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -37,7 +36,7 @@ class _DetailsPageState extends State<DetailsPage> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: Colors.grey.withValues(alpha: 0.3),
                   spreadRadius: 1,
                   blurRadius: 5,
                   offset: const Offset(0, 2),
@@ -250,7 +249,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           right: 8,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.5),
+                              color: Colors.black.withValues(alpha: 0.5),
                               shape: BoxShape.circle,
                             ),
                             child: _isCurrentUserUploader(trial.user)
@@ -615,7 +614,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           right: 8,
                           child: Container(
                             decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.5),
+                              color: Colors.black.withValues(alpha: 0.5),
                               shape: BoxShape.circle,
                             ),
                             child: _isCurrentUserUploader(tooling.user)
@@ -890,7 +889,7 @@ class _TrialTaskPageState extends State<TrialTaskPage> {
   final _mcNameController = TextEditingController();
   final _mcCapacityController = TextEditingController();
   final _dhHeightController = TextEditingController();
-  final TrialService _trialService = TrialService();
+
 
   // Add variables for image and video
   final ImagePicker _picker = ImagePicker();
@@ -1546,7 +1545,7 @@ class _TrialTaskPageState extends State<TrialTaskPage> {
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 ),
-                value: _selectedStatus, // Set the current value
+                initialValue: _selectedStatus, // Set the initial value
                 hint: const Text('Pilih Open/Close'),
                 items: const [
                   DropdownMenuItem(
@@ -2302,7 +2301,7 @@ class _TrialDetailPageState extends State<TrialDetailPage> {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             spreadRadius: 1,
             blurRadius: 1,
             offset: const Offset(0, 1),
@@ -2479,7 +2478,7 @@ class _ToolingDetailPageState extends State<ToolingDetailPage> {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             spreadRadius: 1,
             blurRadius: 1,
             offset: const Offset(0, 1),
